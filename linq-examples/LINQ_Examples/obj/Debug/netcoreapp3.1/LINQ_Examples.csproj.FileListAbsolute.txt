@@ -1,0 +1,13 @@
+C:\Users\jmaldonado\Documents\Blog-Projects\linq-examples\LINQ_Examples\bin\Debug\netcoreapp3.1\LINQ_Examples.exe
+C:\Users\jmaldonado\Documents\Blog-Projects\linq-examples\LINQ_Examples\bin\Debug\netcoreapp3.1\LINQ_Examples.deps.json
+C:\Users\jmaldonado\Documents\Blog-Projects\linq-examples\LINQ_Examples\bin\Debug\netcoreapp3.1\LINQ_Examples.runtimeconfig.json
+C:\Users\jmaldonado\Documents\Blog-Projects\linq-examples\LINQ_Examples\bin\Debug\netcoreapp3.1\LINQ_Examples.runtimeconfig.dev.json
+C:\Users\jmaldonado\Documents\Blog-Projects\linq-examples\LINQ_Examples\bin\Debug\netcoreapp3.1\LINQ_Examples.dll
+C:\Users\jmaldonado\Documents\Blog-Projects\linq-examples\LINQ_Examples\bin\Debug\netcoreapp3.1\LINQ_Examples.pdb
+C:\Users\jmaldonado\Documents\Blog-Projects\linq-examples\LINQ_Examples\obj\Debug\netcoreapp3.1\LINQ_Examples.csprojAssemblyReference.cache
+C:\Users\jmaldonado\Documents\Blog-Projects\linq-examples\LINQ_Examples\obj\Debug\netcoreapp3.1\LINQ_Examples.AssemblyInfoInputs.cache
+C:\Users\jmaldonado\Documents\Blog-Projects\linq-examples\LINQ_Examples\obj\Debug\netcoreapp3.1\LINQ_Examples.AssemblyInfo.cs
+C:\Users\jmaldonado\Documents\Blog-Projects\linq-examples\LINQ_Examples\obj\Debug\netcoreapp3.1\LINQ_Examples.csproj.CoreCompileInputs.cache
+C:\Users\jmaldonado\Documents\Blog-Projects\linq-examples\LINQ_Examples\obj\Debug\netcoreapp3.1\LINQ_Examples.dll
+C:\Users\jmaldonado\Documents\Blog-Projects\linq-examples\LINQ_Examples\obj\Debug\netcoreapp3.1\LINQ_Examples.pdb
+C:\Users\jmaldonado\Documents\Blog-Projects\linq-examples\LINQ_Examples\obj\Debug\netcoreapp3.1\LINQ_Examples.genruntimeconfig.cache
