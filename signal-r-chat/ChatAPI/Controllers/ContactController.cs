@@ -49,7 +49,7 @@ namespace ChatAPI.Controllers
         [HttpPost("addContact")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult> AddContact([FromBody] Contact contact)
+        public async Task<ActionResult> AddContact([FromBody] ContactDTO contact)
         {
             var results = new GenericReturnObject();
             try
@@ -82,7 +82,11 @@ namespace ChatAPI.Controllers
                     results.Message = "Contact doesn't exist";
                     return BadRequest(JsonConvert.SerializeObject(results));
                 }
-                var addContactResults = await _contactService.AddContact(contact);
+                var addContactResults = await _contactService.AddContact(new Contact
+                {
+                    ContactId = contact.ContactId,
+                    UserId = contact.UserId
+                });
                 if (!addContactResults.Item1)
                 {
                     results.Success = false;

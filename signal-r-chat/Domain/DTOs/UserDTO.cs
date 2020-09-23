@@ -13,7 +13,7 @@ namespace Domain.DTOs
         public string UserName { get; set; }
         [JsonProperty("primary_color_hex")]
         public string PrimaryColorHex { get; set; }
-        [JsonProperty("icon")]
-        public string Icon { get; set; }
+        [JsonProperty("profile_picture")]
+        public string ProfilePicture { get; set; }
     }
 }

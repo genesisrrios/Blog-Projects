@@ -2,8 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ChatAPI.Hubs;
-using Domain.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Domain.Services;
+using ChatAPI.Hubs;
 
 namespace ChatAPI
 {
@@ -23,6 +23,7 @@ namespace ChatAPI
         }
 
         public IConfiguration Configuration { get; }
+        readonly string AllowClientPolicy = "_allow_frontend";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -31,7 +32,23 @@ namespace ChatAPI
             services.AddTransient<UserService>();
             services.AddTransient<MessageService>();
             services.AddTransient<ContactService>();
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
+            services.AddCors(
+                x =>
+                {
+                    x.AddPolicy(AllowClientPolicy, options =>
+                    {
+                        options.WithOrigins("https://localhost:8080")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials();
+
+                        options.WithOrigins("http://localhost:8080")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials();
+                    });
+                });
             services.AddSignalR();
         }
 
@@ -46,7 +63,7 @@ namespace ChatAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors(AllowClientPolicy);
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

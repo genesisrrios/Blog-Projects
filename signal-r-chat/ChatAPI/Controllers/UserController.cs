@@ -48,7 +48,7 @@ namespace ChatAPI.Controllers
                 results.Values = new UserDTO
                 {
                     Id = user.Id,
-                    Icon = user.ProfilePicture,
+                    ProfilePicture = user.ProfilePicture,
                     PrimaryColorHex = user.PrimaryColorHex,
                     UserName = user.UserName
                 };
@@ -97,7 +97,7 @@ namespace ChatAPI.Controllers
                     UserName = newUser.UserName,
                     Id = newUser.Id,
                     PrimaryColorHex = userColor.Item2,
-                    Icon = profilePicture
+                    ProfilePicture = profilePicture
                 };
             }
             catch (Exception ex)

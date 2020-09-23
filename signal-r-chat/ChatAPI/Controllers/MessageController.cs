@@ -10,6 +10,7 @@ using Domain.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
+using Newtonsoft.Json;
 
 namespace ChatAPI.Controllers
 {
@@ -57,6 +58,36 @@ namespace ChatAPI.Controllers
                 results.Message = ex.Message;
             }
             return Ok(results);
+        }
+        [HttpGet("getmessages")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult> GetUserMessages([FromQuery] Guid user_id, [FromQuery] Guid contact_id)
+        {
+            var results = new GenericReturnObject<List<ConversationDTO>>();
+            try
+            {
+                if (user_id == Guid.Empty)
+                {
+                    results.Message = "Invalid userid";
+                    results.Success = false;
+                    return BadRequest(results);
+                }
+                if (contact_id == Guid.Empty)
+                {
+                    results.Message = "Invalid contactid";
+                    results.Success = false;
+                    return BadRequest(results);
+                }
+                results.Success = true;
+                results.Values = await _messageService.GetMessageList(user_id, contact_id);
+            }
+            catch (Exception ex)
+            {
+                results.Success = false;
+                results.Message = ex.Message;
+            }
+            return Ok(JsonConvert.SerializeObject(results));
         }
     }
 }

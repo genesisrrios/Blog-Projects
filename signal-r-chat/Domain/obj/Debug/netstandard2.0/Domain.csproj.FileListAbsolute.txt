@@ -1,0 +1,9 @@
+D:\Blog-Projects\signal-r-chat\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfoInputs.cache
+D:\Blog-Projects\signal-r-chat\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
+D:\Blog-Projects\signal-r-chat\Domain\obj\Debug\netstandard2.0\Domain.csproj.CoreCompileInputs.cache
+D:\Blog-Projects\signal-r-chat\Domain\obj\Debug\netstandard2.0\Domain.csprojAssemblyReference.cache
+D:\Blog-Projects\signal-r-chat\Domain\bin\Debug\netstandard2.0\Domain.deps.json
+D:\Blog-Projects\signal-r-chat\Domain\bin\Debug\netstandard2.0\Domain.dll
+D:\Blog-Projects\signal-r-chat\Domain\bin\Debug\netstandard2.0\Domain.pdb
+D:\Blog-Projects\signal-r-chat\Domain\obj\Debug\netstandard2.0\Domain.dll
+D:\Blog-Projects\signal-r-chat\Domain\obj\Debug\netstandard2.0\Domain.pdb

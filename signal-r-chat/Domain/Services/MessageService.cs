@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Domain.Services
 {
@@ -37,7 +39,7 @@ namespace Domain.Services
                                          FromId = messages.From,
                                          ToId = messages.To,
                                          SentByMe = messages.From == userId,
-                                         ProfilePicture = users.Icon,
+                                         ProfilePicture = users.ProfilePicture,
                                          TimeSent = messages.TimeSent.DateTime.ToShortTimeString(),
                                          DateTimeSent = messages.TimeSent
                                      }).OrderBy(x => x.TimeSent).ToListAsync();
