@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MS95HdHyBhtBLru1jXwrXiWXc/Jat0kDShRzhIO0HROssKJFwjOU24IvNlKel2KTXOoNITpplESK//eOpsdN2w==",
+  "dgSpecHash": "U+SNbJuyWFP4MiDDpXRVgyrtsZQ21WqcQsGQMlItETxfYpuU3M0PJ7LMJsdbEsbrDRENI+/vcp/6+6Ic0AWwbA==",
   "success": true,
-  "projectFilePath": "D:\\Blog-Projects\\signal-r-chat\\ChatAPI\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\Blog-Projects\\signal-r-chat\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jmaldonado\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\jmaldonado\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

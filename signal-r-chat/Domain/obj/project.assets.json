@@ -1111,11 +1111,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Blog-Projects\\signal-r-chat\\ChatAPI\\Domain\\Domain.csproj",
+      "projectUniqueName": "D:\\Blog-Projects\\signal-r-chat\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "D:\\Blog-Projects\\signal-r-chat\\ChatAPI\\Domain\\Domain.csproj",
+      "projectPath": "D:\\Blog-Projects\\signal-r-chat\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\jmaldonado\\.nuget\\packages\\",
-      "outputPath": "D:\\Blog-Projects\\signal-r-chat\\ChatAPI\\Domain\\obj\\",
+      "outputPath": "D:\\Blog-Projects\\signal-r-chat\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
