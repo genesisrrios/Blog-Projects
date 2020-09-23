@@ -6,7 +6,7 @@ namespace Domain.Models
 {
     public class Message
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Content { get; set; }
         public Guid From { get; set; }
         public Guid To { get; set; }

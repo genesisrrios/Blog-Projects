@@ -7,18 +7,16 @@ namespace Domain.Helpers
 {
     public class ColorList
     {
-        public Dictionary<string,string> Colors { get; set; } = new Dictionary<string,string>();
-
-        public ColorList()
+        private static Dictionary<string, string> Colors { get; set; } = new Dictionary<string, string>
         {
-            Colors.Add("Brown","#77dd77");
-            Colors.Add("Baby Blue","#89cff0");
-            Colors.Add("Purple","#b39eb5");
-            Colors.Add("Red","#ff6961");
-            Colors.Add("Pink","#ff9899");
-            Colors.Add("Dim Gray","#3B3638");
-        }
-        public (string, string) ReturnRandomColor()
+            {"Brown","#77dd77"},
+            {"Baby Blue","#89cff0"},
+            {"Purple","#b39eb5"},
+            {"Red","#ff6961"},
+            {"Pink","#ff9899"},
+            {"Dim Gray","#3B3638"}
+        };
+        public static (string, string) ReturnRandomColor()
         {
             var random = new Random();
             var colorListCount = Colors.Count;
