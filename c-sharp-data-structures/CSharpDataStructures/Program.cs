@@ -10,30 +10,31 @@ namespace CSharpDataStructures
     {
         static void Main(string[] args)
         {
-
             //FIFO !
-            var queue = new Queue();
-            queue.Enqueue(new Artist { GenreId ="Pop", Name= "GONOSOS", RecordId = 12343 });
-            queue.Enqueue(new Artist { GenreId = "Rock", Name = "GONOSOS", RecordId = 45433 });
-            queue.Enqueue(new Artist { GenreId = "Indie", Name = "GONOSOS", RecordId = 34565 });
-
-            var artistType = typeof(Artist);
-            PropertyInfo[] props = artistType.GetProperties();
-            var artisInfoList = new List<string>();
+            var queue = new Queue<Artist>();
+            queue.Enqueue(new Artist
+            {
+                GenreId = "Neue Deutsche Härte",
+                Name = "Rammstein",
+                RecordId = 1
+            });
+            queue.Enqueue(new Artist
+            {
+                GenreId = "Neue Deutsche Härte",
+                Name = "OOMPH!",
+                RecordId = 2
+            });
+            queue.Enqueue(new Artist
+            {
+                GenreId = "Neue Deutsche Härte",
+                Name = "Eisbrecher",
+                RecordId = 3
+            });
+            queue.Peek();
+            queue.Dequeue();
             foreach (var artist in queue)
             {
-                var artistInfo = new StringBuilder();
-                foreach (var property in props)
-                {
-                    artistInfo.Append(property.Name + " " + property.GetValue(artist) + ", ");
-                }
-                artistInfo.Length --; artistInfo.Length--;
-                artisInfoList.Add(artistInfo.ToString());
-                artistInfo.Clear();
-            }
-            foreach (var artist in artisInfoList)
-            {
-                Console.WriteLine(artist);
+                Console.WriteLine($"Name: {artist.Name}, Genre: {artist.GenreId}");
             }
             Console.Read();
         }
