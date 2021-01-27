@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jmaldonado\\Documents\\Blog-Projects\\linq-examples\\LINQ_Examples\\LINQ_Examples.csproj",
+      "projectUniqueName": "D:\\Blog-Projects\\linq-examples\\LINQ_Examples\\LINQ_Examples.csproj",
       "projectName": "LINQ_Examples",
-      "projectPath": "C:\\Users\\jmaldonado\\Documents\\Blog-Projects\\linq-examples\\LINQ_Examples\\LINQ_Examples.csproj",
+      "projectPath": "D:\\Blog-Projects\\linq-examples\\LINQ_Examples\\LINQ_Examples.csproj",
       "packagesPath": "C:\\Users\\jmaldonado\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jmaldonado\\Documents\\Blog-Projects\\linq-examples\\LINQ_Examples\\obj\\",
+      "outputPath": "D:\\Blog-Projects\\linq-examples\\LINQ_Examples\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -34,11 +34,12 @@
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "\\\\192.168.1.174\\wdcs_build\\nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -50,6 +51,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
@@ -65,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
