@@ -44,7 +44,7 @@ namespace AspNetCoreVueJs.Controllers
 						Username = "starraiden"
 					} 
 			};
-			TempData[TempDataFriendsList] = friendsList;
+			TempData[TempDataFriendsList] = JsonConvert.SerializeObject(friendsList);
 			var model = new IndexViewModel
 			{
 				User = new User
@@ -61,15 +61,19 @@ namespace AspNetCoreVueJs.Controllers
         public bool InsertNewFriendInMemory([FromBody]User friend)
         {
         if (friend == default || !TempData.ContainsKey(TempDataFriendsList)) return false;
-			var friendsList = (List<User>)TempData[TempDataFriendsList];
-			friendsList.Add(friend);
-			TempData[TempDataFriendsList] = friendsList;
+			var tempData = TempData[TempDataFriendsList];
+			var deserializedData = JsonConvert.DeserializeObject<List<User>>((string)tempData);
+			deserializedData.Add(friend);
+			TempData[TempDataFriendsList] = JsonConvert.SerializeObject(deserializedData);
             return true;
         }
         public List<User> GetFriendsList()
         {
-            return (List<User>)TempData[TempDataFriendsList];
-        }
+            var tempData = TempData[TempDataFriendsList];
+			TempData.Keep();
+			var deserializedData = JsonConvert.DeserializeObject<List<User>>((string)tempData);
+			return deserializedData;
+		}
         public IActionResult Privacy()
         {
             return View();
