@@ -31,9 +31,11 @@
         <hr />
         <div v-if="friends_list.length > 0">
             <h2 class="display-4">Friends!</h2>
-            <ul class="list-group list-group-flush" v-for="friend in friends_list">
-                <li class="list-group-item">User: {{friend.name}}, Last Name {{friend.lastName}}, Username: {{friend.username}}</li>
-            </ul>
+            <div class="list-group"  v-for="friend in friends_list">
+                <a v-on:click="removeFriend(friend.username, friend.lastName, friend.name)" class="list-group-item list-group-item-action">
+                    User: {{friend.name}}, Last Name {{friend.lastName}}, Username: {{friend.username}}
+                </a>
+            </div>
         </div>
     </div>
 </div>
@@ -68,11 +70,31 @@
             addFriend: function () {
                 let self = this;
                 fetch('@Url.Action("InsertNewFriendInMemory", "Home")', {
-                    method: 'POST', // or 'PUT'
+                    method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify(self.new_friend),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data)
+                        self.getFriendsList();
+                })
+            },
+            removeFriend: function (username, lastName, name) {
+                let self = this;
+                let deleteParameters = {
+                    username: username,
+                    lastName: lastName,
+                    name: name
+                };
+                fetch('@Url.Action("RemoveFriend", "Home")', {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(deleteParameters)
                 })
                 .then(response => response.json())
                 .then(data => {

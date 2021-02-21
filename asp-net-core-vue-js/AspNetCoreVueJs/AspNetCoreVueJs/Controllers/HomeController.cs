@@ -74,7 +74,17 @@ namespace AspNetCoreVueJs.Controllers
 			var deserializedData = JsonConvert.DeserializeObject<List<User>>((string)tempData);
 			return deserializedData;
 		}
-        public IActionResult Privacy()
+		[HttpDelete]
+		public bool RemoveFriend([FromBody] User friend)
+		{
+			if (friend == default || !TempData.ContainsKey(TempDataFriendsList)) return false;
+			var tempData = TempData[TempDataFriendsList];
+			var deserializedData = JsonConvert.DeserializeObject<List<User>>((string)tempData);
+			deserializedData.Remove(friend);
+			TempData[TempDataFriendsList] = JsonConvert.SerializeObject(deserializedData);
+			return true;
+		}
+		public IActionResult Privacy()
         {
             return View();
         }
